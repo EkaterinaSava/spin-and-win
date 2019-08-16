@@ -1,0 +1,247 @@
+.page-footer {
+  min-height: 384px;
+  padding-right: 55px;
+  background-color: black;
+  position: relative;
+
+  /* top border */
+  &:before {
+    content: '';
+    background: linear-gradient(to right, #2b6f91 0%,#2b6f91 10%,#61add3 20%,#aee0f9 30%,#61add3 40%,#aee0f9 50%,#61add3 60%,#aee0f9 70%,#61add3 80%,#2b6f91 90%,#2b6f91 100%);
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /*** links menu ***/
+  &__links {
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-left: 6px;
+  }
+
+  &__link {
+    color: #a2a1a1;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: $fontFamilyPrimary;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    transition: color .35s ease-out;
+    cursor: pointer;
+
+    &:not(:first-child):before {
+      content: '';
+      width: 1px;
+      height: 10px;
+      background-color: #a2a1a1;
+      position: absolute;
+      left: -11px;
+      top: 9px;
+    }
+
+    &:hover {
+      color: #f2de7b;
+    }
+  }
+
+  /*** payment systems ***/
+  &__payments {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      height: 1px;
+      background: linear-gradient(to right, #000000 0%,#034c72 50%,#000000 100%);
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 1px;
+    }
+  }
+
+  &__payment {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: background-image .35s ease-out;
+    }
+
+    &--mcard {
+      width: 94px;
+      height: 57px;
+      margin-right: 36px;
+    }
+    &--mcard &-icon {
+      background-image: url("../img/payment-mastercard.png");
+
+      &:hover {
+        background-image: url("../img/payment-mastercard-hover.png");
+      }
+    }
+
+    &--yandex {
+      width: 106px;
+      height: 46px;
+      margin-top: 9px;
+      margin-right: 32px;
+    }
+    &--yandex &-icon {
+      background-image: url("../img/payment-yandexmoney.png");
+
+      &:hover {
+        background-image: url("../img/payment-yandexmoney-hover.png");
+      }
+    }
+
+    &--visa {
+      width: 99px;
+      height: 30px;
+      margin-top: 19px;
+      margin-right: 38px;
+    }
+    &--visa &-icon {
+      background-image: url("../img/payment-visa.png");
+
+      &:hover {
+        background-image: url("../img/payment-visa-hover.png");
+      }
+    }
+
+    &--liqpay {
+      width: 166px;
+      height: 29px;
+      margin-top: 26px;
+      margin-right: 33px;
+    }
+    &--liqpay &-icon {
+      background-image: url("../img/payment-liqpay.png");
+
+      &:hover {
+        background-image: url("../img/payment-liqpay-hover.png");
+      }
+    }
+
+    &--qiwi {
+      width: 130px;
+      height: 51px;
+      margin-top: 12px;
+    }
+    &--qiwi &-icon {
+      background-image: url("../img/payment-qiwi.png");
+
+      &:hover {
+        background-image: url("../img/payment-qiwi-hover.png");
+      }
+    }
+  }
+
+  /*** copyright ***/
+  &__copyright {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 6px;
+
+    &-text {
+      font-size: 10px;
+      line-height: 20px;
+      color: #898989;
+      font-family: $fontFamilyPrimary;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– TABLET –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media (max-width: 1023px) {
+  .page-footer {
+    padding-right: 0;
+  }
+}
+
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– MOBILE –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media(max-width: 767px) {
+  .page-footer {
+    padding-bottom: 40px;
+
+    &__links {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+    &__link {
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &__payments {
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px 15%;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    &__payment {
+      &--mcard,
+      &--yandex,
+      &--visa,
+      &--liqpay,
+      &--qiwi {
+        width: auto;
+        flex-basis: calc(100% / 3 - 20px);
+        max-width: 120px;
+        max-height: 40px;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+@media(max-width: 415px) {
+  .page-footer {
+    &__payments {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+}
