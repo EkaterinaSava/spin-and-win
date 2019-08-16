@@ -1,0 +1,66 @@
+/* ––––––––––––––––––––––––––––––––––––––––––––– */
+/* –––––––––––––––––––fonts––––––––––––––––––––– */
+/* ––––––––––––––––––––––––––––––––––––––––––––– */
+
+$fontFamilyPrimary: 'Roboto Condensed', Roboto, Helvetica, Arial, sans-serif;
+
+/* ––––––––––––––––––––––––––––––––––––––––––––– */
+/* ––––––––––––––primary colors––––––––––––––––– */
+/* ––––––––––––––––––––––––––––––––––––––––––––– */
+$primaryGray:    #8d8d8d;
+
+$separator:      #F5F5F5;
+$primaryBlue:    #4284cf;
+
+
+
+$headingText:    #111111;
+/* $grayText:       rgba(17,17,17,.4); */
+$secondaryBlack: #212529;
+
+
+/* ––––––––––––––––––––––– */
+
+$letterSpMain:   .025em;
+$letterSpSmall:  .005em;
+
+$letterSp225:    .225em;
+$letterSp125:    .125em;
+$letterSp08:     .08em;
+
+$headingBorder:  #9B9B9B;
+
+$primaryGold:    #e7dd88;
+$secondaryGold:  #DFCC68;
+$thirdGold:      #BF9F56;
+
+$primaryRed:     #ff4d4d;
+$primaryGreen:   #4CAF50;
+$secondaryGreen: #5FC19F;
+
+$primaryYellow:  #F7F395;
+
+$primaryText:    #111111;
+$secondaryText:  #333333;
+
+$primaryBlack:   #111111;
+
+$lightGray:      #cccccc;
+$secondaryGray:  #4a4a4a;
+$specialGray:    #979797;
+
+$darkBorder:     #333333;
+$grayBorder:     #E5E5E5;
+
+$grayBG:         #FDFDFD;
+
+$grayText:       #9B9B9B;
+$secondaryGrayText: #777;
+
+
+$ultraLightGray: #EFEFEF;
+$superLightGray: #F5F5F5;
+
+$lotGrayBg:      #F9F9F9;
+
+$grayBlue: #FAFAFB;

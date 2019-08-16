@@ -1,0 +1,184 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $primaryText;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: $letterSpMain;
+  font-family: $fontFamilyPrimary;
+  font-weight: normal;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 auto;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $headingText;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: $letterSpMain;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+h2 { font-size: 24px; line-height: 40px; }
+h3 { font-size: 18px; line-height: 25px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
+@media (max-width: 1023px) {
+  h1 {
+    font-size: 30px;
+    line-height: 1.25;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: $primaryText;
+  text-decoration: underline;
+  transition: color .35s;
+  outline: none;
+
+  &:hover {
+    color: $headingText;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 25px;
+  color: $primaryText;
+  li {
+    position: relative;
+    & ~ & {
+      margin-top: 10px;
+    }
+    &:before {
+      content: '•';
+      position: absolute;
+      left: -25px;
+      color: $primaryBlue;
+    }
+  }
+}
+
+
+.ul--reset {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  li {
+    &:before {
+      display: none;
+    }
+    & ~ & {
+      margin-top: 0;
+    }
+  }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+  vertical-align: top;
+}
+
+button {
+  padding: 0;
+}
+
+figure {
+  margin: 25px 0 36px;
+}
+
+figcaption {
+  color: $primaryGray;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+input, textarea, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+[tabindex] {
+  outline: none;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid $grayBorder;
+  margin: 40px 0 30px;
+}
+
+br,
+.ninja--xs,
+.ninja--sm,
+.ninja--md,
+.ninja--lg,
+.ninja--xl {
+  font-family: Arial, Helvetica, sans-serif;
+}
