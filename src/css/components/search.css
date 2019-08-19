@@ -1,0 +1,43 @@
+.search {
+  width: 259px;
+  height: 53px;
+  background-image: url("../img/search-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  &__input {
+    width: 200px;
+    height: auto;
+    color: white;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: $fontFamilyPrimary;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.03em;
+    padding: 5px 12px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    bottom: 13px;
+  }
+
+  /* icon */
+  &:after {
+    content: '';
+    height: 36px;
+    width: 36px;
+    background-image: url("../img/search-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+  }
+}
