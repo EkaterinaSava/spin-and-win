@@ -1,0 +1,49 @@
+.main-banner {
+  background-color: black;
+  background-image: url("../img/main-banner-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__image {
+    height: 310px;
+
+    &-img {
+      display: block;
+      height: 287px;
+      object-fit: contain;
+      margin: -15px auto 0;
+    }
+  }
+}
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– TABLET –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media (max-width: 1023px) {
+  .main-banner {
+    &__image {
+      height: 225px;
+
+      &-img {
+        height: 200px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– MOBILE –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media(max-width: 767px) {
+  .main-banner {
+    &__image {
+      height: 150px;
+
+      &-img {
+        height: 125px;
+      }
+    }
+  }
+}

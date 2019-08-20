@@ -1,0 +1,32 @@
+.social-button {
+  width: 43px;
+  height: 43px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+
+  &--fb {
+    background-image: url("../img/social-fb.png");
+
+    &:hover {
+      background-image: url("../img/social-fb-hover.png");
+    }
+  }
+
+  &--tw {
+    background-image: url("../img/social-tw.png");
+
+    &:hover {
+      background-image: url("../img/social-tw-hover.png");
+    }
+  }
+
+  &--vk {
+    background-image: url("../img/social-vk.png");
+
+    &:hover {
+      background-image: url("../img/social-vk-hover.png");
+    }
+  }
+}

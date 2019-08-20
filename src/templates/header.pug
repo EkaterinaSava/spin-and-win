@@ -1,0 +1,49 @@
+header.page-header
+  //- MOBILE STUFF —————————————————————————————————————————————————————————————
+  
+  //- TOP PART —————————————————————————————————————————————————————————————————
+  .page-header__top
+    .grid-container
+      .grid-row
+        .col-lg-12
+          .page-header__top-inner
+            .page-header__nav
+              a.page-header__nav-link(href="#") Все игры
+              a.page-header__nav-link(href="#") Пополнение счета
+              a.page-header__nav-link(href="#") Получить выйгрыш
+              a.page-header__nav-link(href="#") Бонусы
+              a.page-header__nav-link(href="#") Мобильная версия
+              a.page-header__nav-link(href="#") Контакты
+            a.page-header__fast-reg(href="#")
+              .page-header__fast-reg-text
+            .page-header__social-buttons
+              a.social-button.social-button--fb(href="#")
+              a.social-button.social-button--tw(href="#")
+              a.social-button.social-button--vk(href="#")
+            .page-header__lang
+              .page-header__lang-mobile-text.ninja--desktop Choose language:
+              .select-lang
+                select.chosen-select.js-chosen-image-select
+                  option(data-img-src="resources/img/flag-en.png") English
+                  option(data-img-src="resources/img/flag-ru.png") Russian
+
+  //- MAIN PART ————————————————————————————————————————————————————————————————
+  .page-header__main
+    .grid-container
+      .grid-row
+        .col-lg-12
+          .page-header__main-inner
+            button.ninja--desktop.burger-toggle.js-burger-toggle
+            a.page-header__logo(href="/")
+              img.page-header__logo-img(src="resources/img/logo.jpg", alt="Spin & Win")
+            button.ninja--desktop.account-toggle.js-account-toggle
+            .page-header__auth
+              a.page-header__auth-reg-btn(href="#")
+                .page-header__auth-reg-btn-img
+              .page-header__auth-login
+                input.page-header__auth-login-input(type="text", placeholder="Username")
+                .page-header__auth-login-password
+                  input.page-header__auth-login-input(type="password", placeholder="Password")
+                  a.page-header__auth-login-password-forgot(href="#") Forgot your password?
+                a.page-header__auth-login-btn(href="#")
+                  .page-header__auth-login-btn-img
