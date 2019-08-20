@@ -27,4 +27,14 @@ $(document).ready(function(){
     ],
   });
 
+  // ——— promotions slider —————————————————————————————————————————————————————
+  $('.js-slider-promo').not('.slick-initialized').slick({
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    autoplay: true
+  });
+
 });
