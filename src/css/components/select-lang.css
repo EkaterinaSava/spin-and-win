@@ -1,0 +1,109 @@
+.select-lang {
+
+  /*** upd chosen styles ***/
+  & .chosen-container {
+    font-size: 12px;
+    min-width: 85px;
+  }
+  & .chosen-container-single .chosen-single {
+    height: 50px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #656666;
+    font-family: $fontFamilyPrimary;
+    font-weight: 300;
+    background-color: transparent;
+    padding: 14px 5px;
+
+    /* flag & text */
+    & span {
+      height: 22px;
+      margin-right: 0;
+      background-size: 22px 22px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding-left: 32px;
+      padding-top: 2px;
+      text-shadow: 0 0 5px transparent;
+      transition: color .35s ease-out, text-shadow .35s ease-out;
+    }
+
+    /* arrow */
+    & div {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 7px;
+      padding-top: 3px;
+    }
+    & div b {
+      width: 7px;
+      height: 4px;
+      background-image: url("../img/lang-arrow.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  /* opened/active */
+  & .chosen-container-active.chosen-with-drop {
+    & .chosen-single {
+      box-shadow: none;
+      border: 0;
+
+      /* text */
+      & span {
+        color: #eeb574;
+        text-shadow: 0 0 5px #eeb574;
+      }
+
+      /* arrow */
+      & div b {
+        transform: rotate(180deg);
+        margin-top: -1px;
+      }
+    }
+  }
+
+  /* dropdown */
+  & .chosen-container .chosen-drop {
+    margin-top: 0;
+    border-color: #5c9bbb;
+    background-color: #111;
+
+    & .chosen-results {
+      color: white;
+      padding: 0;
+      margin: 0;
+
+      & li {
+        background-color: rgba(255,255,255,0);
+        background-size: 22px 22px;
+        background-position: 3px center;
+        background-repeat: no-repeat;
+        padding: 7px 0 6px 33px;
+        transition: background-color .35s ease-out;
+      }
+
+      & li.highlighted {
+        background-color: rgba(255,255,255,.25);
+      }
+    }
+  }
+
+  /*** native / mobile select ***/
+  & select {
+    height: 35px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #fff;
+    font-family: $fontFamilyPrimary;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 9px 0 6px 7px;
+    border: 0;
+    outline: 0;
+  }
+}
