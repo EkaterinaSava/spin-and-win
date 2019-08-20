@@ -1,0 +1,101 @@
+-
+  var games = [
+    //— 1 row ———————————————————
+    {
+      image: "games-LuckyMagic",
+      name: "Lucky Magic"
+    },
+    {
+      image: "games-AnubisSecret",
+      name: "Anubis' Secret"
+    },
+    {
+      image: "games-DreamOfKnight",
+      name: "Dream of knight"
+    },
+    //— 2 row ———————————————————
+    {
+      image: "games-LuckyMagic",
+      name: "Lucky Magic"
+    },
+    {
+      image: "games-AnubisSecret",
+      name: "Anubis' Secret"
+    },
+    {
+      image: "games-DreamOfKnight",
+      name: "Dream of knight"
+    },
+    //— 3 row ———————————————————
+    {
+      image: "games-LuckyMagic",
+      name: "Lucky Magic"
+    },
+    {
+      image: "games-AnubisSecret",
+      name: "Anubis' Secret"
+    },
+    {
+      image: "games-DreamOfKnight",
+      name: "Dream of knight"
+    },
+    {
+      image: "games-Submarine",
+      name: "Submarine adventure"
+    },
+    {
+      image: "games-MoneyScent",
+      name: "The big money scent"
+    },
+    //— 4 row ———————————————————
+    {
+      image: "games-LuckyMagic",
+      name: "Lucky Magic"
+    },
+    {
+      image: "games-AnubisSecret",
+      name: "Anubis' Secret"
+    },
+    {
+      image: "games-DreamOfKnight",
+      name: "Dream of knight"
+    },
+    {
+      image: "games-Submarine",
+      name: "Submarine adventure"
+    },
+    {
+      image: "games-MoneyScent",
+      name: "The big money scent"
+    },
+    //— 5 row ———————————————————
+    {
+      image: "games-LuckyMagic",
+      name: "Lucky Magic"
+    },
+    {
+      image: "games-AnubisSecret",
+      name: "Anubis' Secret"
+    },
+    {
+      image: "games-DreamOfKnight",
+      name: "Dream of knight"
+    },
+    {
+      image: "games-Submarine",
+      name: "Submarine adventure"
+    },
+    {
+      image: "games-MoneyScent",
+      name: "The big money scent"
+    }
+  ]
+each game in games  
+  .main-games__game
+    .main-games__game-image
+      img.main-games__game-image-img(src="resources/img/"+ game.image +".png")
+      .main-games__game-image-border
+      .main-games__game-image-hover
+        a.main-games__game-btn-play(href="#")
+        a.main-games__game-btn-demo(href="#")
+    .main-games__game-name!= game.name
