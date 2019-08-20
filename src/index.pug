@@ -1,0 +1,90 @@
+extend templates/page
+
+block content
+  main
+    //- BANNER —————————————————————————————————————————————————————————————————
+    .main-banner
+      .grid-container
+        .grid-row
+          .col-md-12 
+            .main-banner__image
+              img.main-banner__image-img(src="resources/img/main-banner.png", alt="Main banner image")
+
+    //- WINNERS & JACK POTS ————————————————————————————————————————————————————
+    .main-winners
+      .grid-container
+        .grid-row
+          .col-md-6.col-sm-12
+            //- SLIDER —————————————————————————————————————————————————————————
+            .main-winners__slider
+              .main-winners__slider-heading
+                img.main-winners__slider-heading-img(src="resources/img/heading-winners.png", alt="Last winners")
+              include templates/slider-winners
+
+          .col-md-6.col-sm-12
+            //- JACKPOT ————————————————————————————————————————————————————————
+            .main-winners__jackpot
+              .main-winners__jackpot-heading
+                img.main-winners__jackpot-heading-img(src="resources/img/heading-jackpot.png", alt="Jackpot")
+              .main-winners__jackpot-items
+                .main-winners__jackpot-item
+                  img.main-winners__jackpot-item-coin(src="resources/img/coin-gold.png", alt="Gold coin")
+                  .main-winners__jackpot-item-amount
+                    img(src="resources/img/amount-gold.png", alt="7 859 352")
+                .main-winners__jackpot-item
+                  img.main-winners__jackpot-item-coin(src="resources/img/coin-silver.png", alt="Silver coin")
+                  .main-winners__jackpot-item-amount
+                    img(src="resources/img/amount-silver.png", alt="2 148 759")
+                .main-winners__jackpot-item
+                  img.main-winners__jackpot-item-coin(src="resources/img/coin-bronze.png", alt="Bronze coin")
+                  .main-winners__jackpot-item-amount
+                    img(src="resources/img/amount-bronze.png", alt="1 589 654")
+
+    //- GAMES ——————————————————————————————————————————————————————————————————
+    .main-games
+      .grid-container
+        .grid-row
+          .col-md-12
+            //- sort buttons ———————————————————————————————————————————————————
+            .main-games__sort-btns
+              a.main-games__sort-btn.main-games__sort-btn--popular(href="#")
+                .main-games__sort-btn-img
+              a.main-games__sort-btn.main-games__sort-btn--new(href="#")
+                .main-games__sort-btn-img
+              a.main-games__sort-btn.main-games__sort-btn--slot(href="#")
+                .main-games__sort-btn-img
+              a.main-games__sort-btn.main-games__sort-btn--card(href="#")
+                .main-games__sort-btn-img
+              a.main-games__sort-btn.main-games__sort-btn--roulette(href="#")
+                .main-games__sort-btn-img
+
+            //- sort select & search ———————————————————————————————————————————
+            .main-games__nav
+              .main-games__nav-sort
+                .main-games__nav-sort-text Sort by:
+                .main-games__nav-sort-select
+                  .select-sort
+                    select.chosen-select.js-chosen-select
+                      option Popularity &nbsp;|&nbsp;&nbsp; a-z
+                      option Popularity &nbsp;|&nbsp;&nbsp; z-a
+                      option What's new
+                      option Our favorites
+              .main-games__nav-search
+                .search
+                  input.search__input(type="text", placeholder="Search for game...")
+
+            //- games grid —————————————————————————————————————————————————————
+            .main-games__grid.clearfix
+              //- promotions
+              .main-games__promo
+                a.main-games__promo-btn(href="#") 
+                  span.main-games__promo-btn-text Promotions
+                .main-games__promo-slider
+                  include templates/slider-promo
+
+              //- games
+              include templates/games-grid
+
+            //- games grid button ——————————————————————————————————————————————
+            .main-games__grid-button-wrapper
+              a.main-games__grid-button(href="#")
