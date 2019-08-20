@@ -1,0 +1,400 @@
+.main-games {
+  flex: 1 1 auto;
+  background-color: black;
+  background-image: url("../img/main-bg-pattern.jpg");
+  background-repeat: repeat;
+
+  /*** sort buttons ***/
+  &__sort-btns {
+    display: flex;
+    padding-top: 3px;
+    margin-left: -12px;
+    margin-right: -12px;
+    overflow: hidden;
+  }
+
+  &__sort-btn {
+    flex-shrink: 0;
+    width: 180px;
+    height: 52px;
+    margin-left: 12px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &-img {
+      width: 253px;
+      height: 52px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-left: -28px;
+      transition: background-image .35s ease-out;
+    }
+
+    &--popular &-img {
+      background-image: url("../img/btn-games-popular.png");
+
+      &:hover {
+        background-image: url("../img/btn-games-popular-hover.png");
+      }
+    }
+    &--new &-img {
+      background-image: url("../img/btn-games-new.png");
+
+      &:hover {
+        background-image: url("../img/btn-games-new-hover.png");
+      }
+    }
+    &--slot &-img {
+      background-image: url("../img/btn-games-slot.png");
+
+      &:hover {
+        background-image: url("../img/btn-games-slot-hover.png");
+      }
+    }
+    &--card &-img {
+      background-image: url("../img/btn-games-card.png");
+
+      &:hover {
+        background-image: url("../img/btn-games-card-hover.png");
+      }
+    }
+    &--roulette &-img {
+      background-image: url("../img/btn-games-roulette.png");
+
+      &:hover {
+        background-image: url("../img/btn-games-roulette-hover.png");
+      }
+    }
+  }
+
+  /*** navigation: sort & search ***/
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -8px;
+
+    &-sort {
+      display: flex;
+
+      &-text {
+        font-size: 13px;
+        line-height: 20px;
+        color: white;
+        font-family: $fontFamilyPrimary;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding-top: 9px;
+        padding-bottom: 4px;
+      }
+    }
+
+    &-search {
+      width: 240px;
+      height: 35px;
+
+      & .search {
+        margin-top: -8px;
+        margin-left: -10px;
+      }
+    }
+  }
+
+  /*** games grid ***/
+  &__grid {
+    padding-top: 6px;
+    margin-left: -13px;
+    margin-right: -12px;
+  }
+
+  &__game {
+    float: left;
+    margin-left: 13px;
+    margin-right: 12px;
+    margin-bottom: 14px;
+
+    &-image {
+      width: 180px;
+      height: 122px;
+      position: relative;
+
+      &-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      &-border {
+        height: 156px;
+        width: 214px;
+        background-image: url("../img/games-img-border.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -17px;
+        left: -17px;
+        transition: background-image .35s ease-out;
+      }
+
+      &-hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        background-color: rgba(0,0,0,.8);
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        right: 1px;
+        bottom: 1px;
+        transition: opacity .35s ease-out;
+      }
+    }
+
+    &:hover &-image-border {
+      background-image: url("../img/games-img-border-hover.png");
+    }
+    &:hover &-image-hover {
+      opacity: 1;
+    }
+
+    &-name {
+      font-size: 13px;
+      line-height: 16px;
+      color: #e8e9ea;
+      font-family: $fontFamilyPrimary;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding-top: 7px;
+    }
+
+    /* buttons */
+    &-btn-play {
+      display: block;
+      width: 120px;
+      height: 46px;
+      background-image: url("../img/btn-games-play.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 8px;
+      margin-left: 8px;
+      transition: background-image .35s ease-out;
+
+      &:hover {
+        background-image: url("../img/btn-games-play-hover.png");
+      }
+    }
+    &-btn-demo {
+      display: block;
+      width: 120px;
+      height: 43px;
+      background-image: url("../img/btn-games-demo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: -10px;
+      transition: background-image .35s ease-out;
+
+      &:hover {
+        background-image: url("../img/btn-games-demo-hover.png");
+      }
+    }
+  }
+
+  /*** promo ***/
+  &__promo {
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 18px;
+
+    &-btn {
+      display: block;
+      height: 38px;
+      width: 387px;
+      text-align: center;
+      text-decoration: none;
+      padding-left: 14px;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 438px;
+        height: 87px;
+        background-image: url("../img/btn-promo-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -25px;
+        left: -27px;
+      }
+
+      &-text {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 36px;
+        color: #10154d;
+        font-family: $fontFamilyPrimary;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &-slider {
+      margin-bottom: 20px;
+    }
+  }
+
+  /*** games grid button ***/
+  &__grid-button {
+    display: block;
+    width: 150px;
+    height: 46px;
+    text-decoration: none;
+    background-image: url("../img/btn-more-games.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background-image .35s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      background-image: url("../img/btn-more-games-hover.png");
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      min-width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+/* –––––––––––––––––––––––––––– */
+/* –––––– SMALL DESKTOP ––––––— */
+/* –––––––––––––––––––––––––––– */
+@media (max-width: 1279px) {
+  .main-games {
+    &__sort {
+
+      &-btns {
+        margin-left: -7px;
+        margin-right: -5px;
+      }
+
+      &-btn {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+
+    &__nav {
+      width: 820px;
+      padding: 0 12px;
+      margin: 0 auto;
+    }
+
+    &__grid {
+      width: 820px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– TABLET –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media (max-width: 1023px) {
+  .main-games {
+    &__sort {
+
+      &-btns {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+    }
+
+    &__nav {
+      width: 615px;
+    }
+
+    &__grid {
+      width: 615px;
+    }
+  }
+}
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– MOBILE –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media(max-width: 767px) {
+  .main-games {
+    &__sort {
+      &-btns {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+    }
+
+    &__nav {
+      width: 410px;
+    }
+
+    &__grid {
+      width: 410px;
+    }
+  }
+}
+
+@media(max-width: 460px) {
+  .main-games {
+    &__nav {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+
+      &-search {
+        order: 1;
+        transform: scale(.755);
+      }
+      &-sort {
+        order: 2;
+      }
+    }
+
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__game {
+      float: none;
+    }
+
+    &__promo {
+      float: none;
+      transform: scale(.465);
+      margin-right: 0;
+      margin-top: -70px;
+      margin-bottom: -55px;
+    }
+  }
+}

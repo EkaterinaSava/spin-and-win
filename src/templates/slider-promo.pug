@@ -1,0 +1,32 @@
+.slider-promo.js-slider-promo
+  -
+    var promos = [
+      {
+        image: 'slider-image-1',
+        heading: 'promo-slide-text-1',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt leo malesuada eros elementum eget eu ligula.'
+      },
+      {
+        image: 'slider-image-2',
+        heading: 'promo-slide-text-2',
+        desc: 'Phasellus tincidunt leo malesuada eros elementum eget eu ligula.'
+      },
+      {
+        image: 'slider-image-3',
+        heading: 'promo-slide-text-1',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt leo malesuada eros elementum eget eu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      },
+      {
+        image: 'slider-image-4',
+        heading: 'promo-slide-text-2',
+        desc: 'Phasellus tincidunt leo malesuada eros elementum eget eu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+      }
+    ]
+  each promo in promos  
+    a.slider-promo__slide(href="#")
+      .slider-promo__slide-image
+        img.slider-promo__slide-image-img(src="resources/img/"+ promo.image +".png")
+      .slider-promo__slide-content
+        .slider-promo__slide-heading
+          img.slider-promo__slide-heading-img(src="resources/img/"+ promo.heading +".png")
+        .slider-promo__slide-desc!= promo.desc
