@@ -1,0 +1,36 @@
+.slider-winners.js-slider-winners
+  -
+    var winners = [
+      {
+        image: 'winners-gothic',
+        game: 'Ghotic',
+        amount: '185.00$',
+        name: 'PlayerName'
+      },
+      {
+        image: 'winners-got',
+        game: 'Game of Thrones',
+        amount: '185.00$',
+        name: 'PlayerName'
+      },
+      {
+        image: 'winners-robyn',
+        game: 'Robyn',
+        amount: '185.00$',
+        name: 'PlayerName'
+      },
+      {
+        image: 'winners-gothic',
+        game: 'Ghotic',
+        amount: '185.00$',
+        name: 'PlayerName'
+      }
+    ]
+  each winner in winners  
+    a.slider-winners__slide(href="#")
+      .slider-winners__slide-image
+        img.slider-winners__slide-image-img(src="resources/img/"+ winner.image +".png")
+      .slider-winners__slide-content
+        .slider-winners__slide-game!= winner.game
+        .slider-winners__slide-amount!= winner.amount
+        .slider-winners__slide-name!= winner.name

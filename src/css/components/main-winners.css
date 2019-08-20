@@ -1,0 +1,158 @@
+.main-winners {
+  height: 105px;
+  background-color: black;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    height: 25px;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &:before {
+    background-image: url("../img/winners-top-border.png");
+    top: -17px;
+  }
+  &:after {
+    background-image: url("../img/winners-bottom-border.png");
+    bottom: -17px;
+  }
+
+  /*** winners slider ***/
+  &__slider {
+    min-width: 545px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    &-heading {
+      padding-top: 13px;
+      padding-left: 28px;
+
+      &-img {
+        width: 107px;
+        height: 32px;
+        object-fit: contain;
+      }
+    }
+
+    & .slider-winners {
+      margin-top: -12px;
+    }
+  }
+
+  /*** jackpot ***/
+  &__jackpot {
+    padding-left: 28px;
+
+    &-heading {
+      padding-top: 13px;
+      padding-left: 10px;
+
+      &-img {
+        display: block;
+        width: 74px;
+        height: 32px;
+        object-fit: contain;
+      }
+    }
+
+    &-items {
+      display: flex;
+      margin-top: -20px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-right: 5px;
+
+      &-coin {
+        width: 76px;
+        height: 76px;
+        object-fit: contain;
+      }
+
+      &-amount {
+        height: 18px;
+        width: 74px;
+        object-fit: contain;
+        margin-top: -4px;
+        margin-left: -14px;
+      }
+    }
+  }
+}
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– TABLET –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media (max-width: 1023px) {
+  .main-winners {
+    height: auto;
+
+    &__slider {
+      min-width: 100%;
+
+      &-heading {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+      }
+
+      & .slider-winners {
+        margin-top: 0;
+      }
+    }
+
+    &__jackpot {
+      padding-left: 0;
+      padding-bottom: 10px;
+
+      &-heading {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+      }
+
+      &-items {
+        justify-content: center;
+        margin-top: -10px;
+      }
+
+      &-item {
+        margin-left: 5px;
+
+        &-amount {
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+}
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– MOBILE –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media(max-width: 767px) {
+  .main-winners {
+    &__jackpot {
+      padding-bottom: 15px;
+
+      &-items {
+        margin-left: -20px;
+      }
+
+      &-item {
+        &-coin {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
