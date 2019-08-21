@@ -159,6 +159,21 @@
         position: absolute;
         top: -15px;
         left: -15px;
+
+        &:after {
+          content: '';
+          opacity: 0;
+          height: 153px;
+          width: 211px;
+          background-image: url("../img/game-border--hover.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity .35s ease-out;
+        }
       }
 
       &-hover {
@@ -177,9 +192,7 @@
       }
     }
 
-    &:hover &-image-border {
-      background-image: url("../img/game-border--hover.png");
-    }
+    &:hover &-image-border:after,
     &:hover &-image-hover {
       opacity: 1;
     }

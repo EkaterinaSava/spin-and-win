@@ -24,22 +24,31 @@
         object-fit: cover;
       }
 
+      &:before,
       &:after {
         content: '';
         width: 81px;
         height: 53px;
-        background-image: url("../img/winners-img-border.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
-        top: -5px;
-        left: -5px;
+        top: -6px;
+        left: -6px;
+        transition: opacity .35s ease-out;
       }
 
-      &:hover:after {
+      &:before {
+        background-image: url("../img/winners-img-border.png");
+      }
+      &:after {
+        opacity: 0;
         background-image: url("../img/winners-img-border--hover.png");
       }
+    }
+
+    &:hover &-image:after {
+      opacity: 1;
     }
 
     &-content {

@@ -81,26 +81,31 @@
       overflow: visible;
       cursor: pointer;
 
+      &:before,
       &:after {
         content: '';
         width: 49px;
         height: 48px;
-        background-image: url("../img/slider-dot.png");
         background-size: 49px 48px;
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
         top: 1px;
         left: -15px;
+        transition: opacity .35s ease-out;
+        z-index: -1;
+      }
+      &:before {
+        background-image: url("../img/slider-dot.png");
+      }
+      &:after {
+        opacity: 0;
+        background-image: url("../img/slider-dot--active.png");
       }
 
-      &:hover,
-      &.slick-active {
-        background-color: transparent;
-
-        &:after {
-          background-image: url("../img/slider-dot--active.png");
-        }
+      &:hover:after,
+      &.slick-active:after {
+        opacity: 1;
       }
     }
   }
