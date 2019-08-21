@@ -61,10 +61,10 @@ $screen-lg-container: 1060px;
 
 /* -------------------------------------------------- */
 
-@media(max-width: 1023px) {
+@media(max-width: 767px) {
   .ninja--mobile  { display: none  !important; }
 }
-@media(min-width: 1024px) {
+@media(min-width: 768px) {
   .ninja--desktop { display: none  !important; }
 }
 

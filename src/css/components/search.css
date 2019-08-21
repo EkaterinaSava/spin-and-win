@@ -1,6 +1,6 @@
 .search {
-  width: 259px;
-  height: 53px;
+  width: 255px;
+  height: 49px;
   background-image: url("../img/search-bg.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -25,13 +25,14 @@
     top: 13px;
     left: 12px;
     bottom: 13px;
+    z-index: 1;
   }
 
   /* icon */
   &:after {
     content: '';
-    height: 36px;
-    width: 36px;
+    height: 32px;
+    width: 32px;
     background-image: url("../img/search-icon.png");
     background-size: contain;
     background-repeat: no-repeat;

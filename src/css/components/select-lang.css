@@ -13,7 +13,7 @@
     font-family: $fontFamilyPrimary;
     font-weight: 300;
     background-color: transparent;
-    padding: 14px 5px;
+    padding: 14px 7px;
 
     /* flag & text */
     & span {
@@ -54,8 +54,8 @@
 
       /* text */
       & span {
-        color: #eeb574;
-        text-shadow: 0 0 5px #eeb574;
+        color: $orangePrimary;
+        text-shadow: 0 0 5px $orangePrimary;
       }
 
       /* arrow */
@@ -69,8 +69,8 @@
   /* dropdown */
   & .chosen-container .chosen-drop {
     margin-top: 0;
-    border-color: #111;
-    background-color: #111;
+    border-color: #353535;
+    background-color: $darkPrimary;
 
     & .chosen-results {
       color: white;
@@ -80,9 +80,9 @@
       & li {
         background-color: rgba(255,255,255,0);
         background-size: 22px 22px;
-        background-position: 3px center;
+        background-position: 6px center;
         background-repeat: no-repeat;
-        padding: 7px 0 6px 33px;
+        padding: 7px 0 6px 38px;
         transition: background-color .35s ease-out;
       }
 
@@ -94,16 +94,34 @@
 
   /*** native / mobile select ***/
   & select {
-    height: 35px;
-    font-size: 13px;
+    height: 50px;
+    font-size: 12px;
     line-height: 20px;
-    color: #fff;
+    color: #656666;
     font-family: $fontFamilyPrimary;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-weight: 300;
     background-color: transparent;
-    padding: 9px 0 6px 7px;
+    padding: 8px 0 8px 38px;
     border: 0;
     outline: 0;
+  }
+}
+
+
+/* –––––––––––––––––––––––––––– */
+/* –––––––––– MOBILE –––––––––– */
+/* –––––––––––––––––––––––––––– */
+@media(max-width: 767px) {
+  .select-lang {
+    /*** native / mobile select ***/
+    & select {
+      height: 35px;
+      font-size: 13px;
+      line-height: 20px;
+      color: white;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 9px 0 6px 7px;
+    }
   }
 }

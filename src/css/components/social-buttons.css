@@ -4,29 +4,30 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: background-image .35s ease-out;
   cursor: pointer;
 
   &--fb {
-    background-image: url("../img/social-fb.png");
+    background-image: url("../img/social-btn--fb.png");
 
     &:hover {
-      background-image: url("../img/social-fb-hover.png");
+      background-image: url("../img/social-btn-hover--fb.png");
     }
   }
 
   &--tw {
-    background-image: url("../img/social-tw.png");
+    background-image: url("../img/social-btn--tw.png");
 
     &:hover {
-      background-image: url("../img/social-tw-hover.png");
+      background-image: url("../img/social-btn-hover--tw.png");
     }
   }
 
   &--vk {
-    background-image: url("../img/social-vk.png");
+    background-image: url("../img/social-btn--vk.png");
 
     &:hover {
-      background-image: url("../img/social-vk-hover.png");
+      background-image: url("../img/social-btn-hover--vk.png");
     }
   }
 }

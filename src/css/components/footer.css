@@ -7,7 +7,7 @@
   /* top border */
   &:before {
     content: '';
-    background: linear-gradient(to right, #2b6f91 0%,#2b6f91 10%,#61add3 20%,#aee0f9 30%,#61add3 40%,#aee0f9 50%,#61add3 60%,#aee0f9 70%,#61add3 80%,#2b6f91 90%,#2b6f91 100%);
+    background: $blueGradient;
     height: 1px;
     position: absolute;
     top: 0;
@@ -25,7 +25,7 @@
   }
 
   &__link {
-    color: #a2a1a1;
+    color: $grayPrimary;
     font-size: 12px;
     line-height: 20px;
     font-family: $fontFamilyPrimary;
@@ -34,6 +34,7 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 3px;
+    margin-top: -1px;
     margin-left: 10px;
     margin-right: 10px;
     position: relative;
@@ -44,14 +45,14 @@
       content: '';
       width: 1px;
       height: 10px;
-      background-color: #a2a1a1;
+      background-color: $grayPrimary;
       position: absolute;
       left: -11px;
       top: 9px;
     }
 
     &:hover {
-      color: #f2de7b;
+      color: $yellowPrimary;
     }
   }
 
@@ -101,24 +102,24 @@
       margin-right: 36px;
     }
     &--mcard &-icon {
-      background-image: url("../img/payment-mastercard.png");
+      background-image: url("../img/payment--mastercard.png");
 
       &:hover {
-        background-image: url("../img/payment-mastercard-hover.png");
+        background-image: url("../img/payment-hover--mastercard.png");
       }
     }
 
     &--yandex {
       width: 106px;
       height: 46px;
-      margin-top: 9px;
+      margin-top: 8px;
       margin-right: 32px;
     }
     &--yandex &-icon {
-      background-image: url("../img/payment-yandexmoney.png");
+      background-image: url("../img/payment--yandexmoney.png");
 
       &:hover {
-        background-image: url("../img/payment-yandexmoney-hover.png");
+        background-image: url("../img/payment-hover--yandexmoney.png");
       }
     }
 
@@ -129,10 +130,10 @@
       margin-right: 38px;
     }
     &--visa &-icon {
-      background-image: url("../img/payment-visa.png");
+      background-image: url("../img/payment--visa.png");
 
       &:hover {
-        background-image: url("../img/payment-visa-hover.png");
+        background-image: url("../img/payment-hover--visa.png");
       }
     }
 
@@ -143,10 +144,10 @@
       margin-right: 33px;
     }
     &--liqpay &-icon {
-      background-image: url("../img/payment-liqpay.png");
+      background-image: url("../img/payment--liqpay.png");
 
       &:hover {
-        background-image: url("../img/payment-liqpay-hover.png");
+        background-image: url("../img/payment-hover--liqpay.png");
       }
     }
 
@@ -156,10 +157,10 @@
       margin-top: 12px;
     }
     &--qiwi &-icon {
-      background-image: url("../img/payment-qiwi.png");
+      background-image: url("../img/payment--qiwi.png");
 
       &:hover {
-        background-image: url("../img/payment-qiwi-hover.png");
+        background-image: url("../img/payment-hover--qiwi.png");
       }
     }
   }

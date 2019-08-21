@@ -26,20 +26,20 @@
 
       &:after {
         content: '';
-        width: 84px;
-        height: 56px;
+        width: 81px;
+        height: 53px;
         background-image: url("../img/winners-img-border.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
-        top: -8px;
-        left: -8px;
+        top: -5px;
+        left: -5px;
         transition: background-image .35s ease-out;
       }
 
       &:hover:after {
-        background-image: url("../img/winners-img-border-hover.png");
+        background-image: url("../img/winners-img-border--hover.png");
       }
     }
 
@@ -64,7 +64,7 @@
       line-height: 12px;
       font-family: $fontFamilyPrimary;
       font-weight: 700;
-      color: #f2de7b;
+      color: $yellowPrimary;
       white-space: nowrap;
       padding-top: 2px;
     }
@@ -89,38 +89,32 @@
   & .slick-arrow {
     width: 40px;
     height: auto;
-    background-size: 60px 72px;
+    background-size: 61px 67px;
+    background-position: -10px center;
     position: absolute;
     top: 0;
     bottom: 0;
+    transition: background-image .35s ease-out;
     cursor: pointer;
     z-index: 1;
   }
   & .slick-prev {
     background-image: url("../img/arrow-left.png");
-    background-position: -5px center;
     left: 0;
 
     &:hover {
-      background-image: url("../img/arrow-left-hover.png");
+      background-image: url("../img/arrow-left--hover.png");
     }
   }
   & .slick-next {
     background-image: url("../img/arrow-right.png");
-    background-position: -10px center;
+
     right: 0;
 
     &:hover {
-      background-image: url("../img/arrow-right-hover.png");
+      background-image: url("../img/arrow-right--hover.png");
     }
   }
-}
-
-/* –––––––––––––––––––––––––––– */
-/* –––––––––– TABLET –––––––––– */
-/* –––––––––––––––––––––––––––– */
-@media (max-width: 1023px) {
-
 }
 
 /* –––––––––––––––––––––––––––– */
