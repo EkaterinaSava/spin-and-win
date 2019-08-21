@@ -5,11 +5,30 @@
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+  position: relative;
+
+  &:after {
+    content: '';
+    opacity: 0;
+    width: 43px;
+    height: 43px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .35s ease-out;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
 
   &--fb {
     background-image: url("../img/social-btn--fb.png");
 
-    &:hover {
+    &:after {
       background-image: url("../img/social-btn-hover--fb.png");
     }
   }
@@ -17,7 +36,7 @@
   &--tw {
     background-image: url("../img/social-btn--tw.png");
 
-    &:hover {
+    &:after {
       background-image: url("../img/social-btn-hover--tw.png");
     }
   }
@@ -25,7 +44,7 @@
   &--vk {
     background-image: url("../img/social-btn--vk.png");
 
-    &:hover {
+    &:after {
       background-image: url("../img/social-btn-hover--vk.png");
     }
   }

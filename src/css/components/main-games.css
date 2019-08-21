@@ -20,8 +20,6 @@
     margin-left: 12px;
     margin-right: 12px;
     cursor: pointer;
-    position: relative;
-    z-index: 1;
 
     &-img {
       width: 220px;
@@ -30,42 +28,62 @@
       background-size: contain;
       background-repeat: no-repeat;
       margin-left: -19px;
+      position: relative;
+
+      &:after {
+        content: '';
+        opacity: 0;
+        width: 220px;
+        height: 53px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .35s ease-out;
+      }
     }
 
     &--popular &-img {
       background-image: url("../img/btn-sort--popular.png");
 
-      &:hover {
+      &:after {
         background-image: url("../img/btn-sort-hover--popular.png");
       }
     }
+
     &--new &-img {
       background-image: url("../img/btn-sort--new.png");
 
-      &:hover {
+      &:after {
         background-image: url("../img/btn-sort-hover--new.png");
       }
     }
     &--slot &-img {
       background-image: url("../img/btn-sort--slot.png");
 
-      &:hover {
+      &:after {
         background-image: url("../img/btn-sort-hover--slot.png");
       }
     }
     &--card &-img {
       background-image: url("../img/btn-sort--card.png");
 
-      &:hover {
+      &:after {
         background-image: url("../img/btn-sort-hover--card.png");
       }
     }
     &--roulette &-img {
       background-image: url("../img/btn-sort--roulette.png");
 
-      &:hover {
+      &:after {
         background-image: url("../img/btn-sort-hover--roulette.png");
       }
+    }
+
+    &:hover &-img:after {
+      opacity: 1;
     }
   }
 
@@ -187,11 +205,28 @@
       background-size: contain;
       margin-top: 6px;
       margin-left: 3px;
+      position: relative;
+      cursor: pointer;
 
-      &:hover {
+      &:after {
+        content: '';
+        opacity: 0;
+        width: 116px;
+        height: 47px;
         background-image: url("../img/btn-play--hover.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .35s ease-out;
+      }
+      &:hover:after {
+        opacity: 1;
       }
     }
+
     &-btn-demo {
       display: block;
       width: 95px;
@@ -202,9 +237,26 @@
       background-size: contain;
       margin-top: -12px;
       margin-left: 5px;
+      position: relative;
+      cursor: pointer;
 
-      &:hover {
+      &:after {
+        content: '';
+        opacity: 0;
+        width: 95px;
+        height: 44px;
         background-image: url("../img/btn-demo--hover.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .35s ease-out;
+      }
+
+      &:hover:after {
+        opacity: 1;
       }
     }
   }
@@ -272,10 +324,26 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    position: relative;
     cursor: pointer;
 
-    &:hover {
+    &:after {
+      content: '';
+      opacity: 0;
+      width: 148px;
+      height: 46px;
       background-image: url("../img/btn-more-games--hover.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity .35s ease-out;
+    }
+
+    &:hover:after {
+      opacity: 1;
     }
 
     &-wrapper {
