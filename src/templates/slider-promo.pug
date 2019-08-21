@@ -25,8 +25,8 @@
   each promo in promos  
     a.slider-promo__slide(href="#")
       .slider-promo__slide-image
-        img.slider-promo__slide-image-img(src="resources/img/"+ promo.image +".png")
+        img.slider-promo__slide-image-img(src="resources/img/"+ promo.image +".png", alt="Promotions image")
       .slider-promo__slide-content
         .slider-promo__slide-heading
-          img.slider-promo__slide-heading-img(src="resources/img/"+ promo.heading +".png")
+          img.slider-promo__slide-heading-img(src="resources/img/"+ promo.heading +".png", alt="Promotion heading text")
         .slider-promo__slide-desc!= promo.desc

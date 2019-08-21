@@ -35,7 +35,7 @@
   each winner in winners  
     a.slider-winners__slide(href="#")
       .slider-winners__slide-image
-        img.slider-winners__slide-image-img(src="resources/img/"+ winner.image +".jpg")
+        img.slider-winners__slide-image-img(src="resources/img/"+ winner.image +".jpg", alt="Game image")
       .slider-winners__slide-content
         .slider-winners__slide-game!= winner.game
         .slider-winners__slide-amount!= winner.amount
