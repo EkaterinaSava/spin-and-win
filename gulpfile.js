@@ -127,6 +127,7 @@ gulp.task('js-libraries', function() {
 gulp.task('js-components', function() {
   return gulp.src( paths.jsComponents )
     .pipe( concat('main.js') )
+    .pipe( uglify() )
     .pipe( gulp.dest('dist/resources/js') )
     .pipe( browserSync.stream() );
 });
