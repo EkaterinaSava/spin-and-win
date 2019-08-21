@@ -93,7 +93,6 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      transition: background-image .35s ease-out;
     }
 
     &--mcard {

@@ -68,7 +68,6 @@
       background-position: center;
       background-size: contain;
       margin-right: -5px;
-      transition: background-image .35s ease-out;
 
       &:hover {
         background-image: url("../img/fast-reg--hover.png");
@@ -159,7 +158,6 @@
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
-          transition: background-image .35s ease-out;
         }
 
         &:hover &-img {
@@ -236,7 +234,6 @@
           background-repeat: no-repeat;
           background-position: center;
           background-size: contain;
-          transition: background-image .35s ease-out;
         }
 
         &:hover &-img {
