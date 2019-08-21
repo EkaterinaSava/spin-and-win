@@ -5,7 +5,6 @@
 
 @import 'plugins/*.css';
 @import 'components/*.css';
-@import 'pages/*.css';
 
 @import 'global/print.css';
 @import 'global/helpers.css';
